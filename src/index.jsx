@@ -11,7 +11,7 @@ function App() {
   return "app";
 }
 
-function AuthApp({ user }) {
+function AuthApp() {
   return (
     <BrowserRouter>
       <Switch>
