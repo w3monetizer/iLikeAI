@@ -1,6 +1,6 @@
 import React from "react";
 import homeSvg from "../../static/home.svg";
-// import * as db from "../firestore";
+import * as db from "../firestore";
 
 function SignIn() {
   return (
