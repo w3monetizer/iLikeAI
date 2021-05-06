@@ -7,7 +7,7 @@ import SignIn from "./components/SignIn";
 import Loading from "./components/shared/Loading";
 import useAuth from "./hooks/useAuth";
 
-const UserContext = React.createContext();
+export const UserContext = React.createContext();
 
 function App() {
   const { user, loading } = useAuth();
