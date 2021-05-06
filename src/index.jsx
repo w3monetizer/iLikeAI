@@ -14,7 +14,7 @@ function App() {
 
   // Use loading & user state vars to decide what to render
   if (loading) return <Loading />
-  return user ? <AuthApp /> : <UnAuthApp />;
+  return user ? <AuthApp user={user}/> : <UnAuthApp />;
 }
 
 // Authenticated App and Routes :
