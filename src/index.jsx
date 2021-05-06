@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ListPage from "./pages/ListPage";
 import HomePage from "./pages/HomePage";
+import SignIn from "./components/SignIn";
 // import Loading from "./components/shared/Loading";
 // import SignIn from "./components/SignIn";
 // import useAuth from "./hooks/useAuth";
@@ -24,7 +25,7 @@ function AuthApp() {
 }
 
 function UnAuthApp() {
-  return "unauth";
+  return <SignIn />;
 }
 
 ReactDOM.render(
