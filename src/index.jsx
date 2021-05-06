@@ -22,7 +22,7 @@ function AuthApp({user}) {
   return (
     <BrowserRouter>
       <Switch>
-        <UserContext.Provider>
+        <UserContext.Provider value={user}>
           <Route path="/:listId" component={ListPage} />
           <Route exact path="/" component={HomePage} />
         </UserContext.Provider>
