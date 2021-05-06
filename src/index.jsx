@@ -29,7 +29,7 @@ function UnAuthApp() {
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <UnAuthApp />
   </React.StrictMode>,
   document.getElementById("root")
 );
