@@ -4,13 +4,15 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ListPage from "./pages/ListPage";
 import HomePage from "./pages/HomePage";
 import SignIn from "./components/SignIn";
-import * as db from './firestore';
-// import Loading from "./components/shared/Loading";
-// import useAuth from "./hooks/useAuth";
+import Loading from "./components/shared/Loading";
+import useAuth from "./hooks/useAuth";
 
 function App() {
-  db.checkAuth();
-  return "app";
+  const { user, loading } = useAuth();
+
+  // Use loading & user state vars to decide what to render
+  if (loading) return <Loading />
+  return user ? <AuthApp /> : <UnAuthApp />;
 }
 
 // Authenticated App and Routes :
