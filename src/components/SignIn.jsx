@@ -14,7 +14,7 @@ function SignIn() {
           />
           <div className="text-center lg:w-2/3 w-full">
             <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium italic text-white">
-              ShopSharer
+              my Code | AI Sharer
             </h1>
             <p className="leading-relaxed mb-8 ">
               Code | AI is a social coding app that enables you to share scripts with friends in realtime.
