@@ -17,8 +17,7 @@ function SignIn() {
               ShopSharer
             </h1>
             <p className="leading-relaxed mb-8 ">
-              ShopSharer is a social app that enables you to share your shopping
-              lists with friends in realtime.
+              Code | AI is a social coding app that enables you to share scripts with friends in realtime.
             </p>
             <div className="flex justify-center">
               <button
