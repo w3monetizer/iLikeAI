@@ -11,6 +11,7 @@ function App() {
   return "app";
 }
 
+// Authenticated App and Routes :
 function AuthApp() {
   return (
     <BrowserRouter>
