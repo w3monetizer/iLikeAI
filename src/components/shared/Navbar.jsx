@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-// import * as db from "../../firestore";
+import * as db from "../../firestore";
 
 function Navbar() {
   const { pathname } = useLocation();
