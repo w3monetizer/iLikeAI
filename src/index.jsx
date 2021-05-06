@@ -9,6 +9,7 @@ import * as db from './firestore';
 // import useAuth from "./hooks/useAuth";
 
 function App() {
+  db.checkAuth();
   return "app";
 }
 
