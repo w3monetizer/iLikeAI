@@ -7,6 +7,8 @@ import SignIn from "./components/SignIn";
 import Loading from "./components/shared/Loading";
 import useAuth from "./hooks/useAuth";
 
+const UserContext = React.createContext();
+
 function App() {
   const { user, loading } = useAuth();
 
@@ -16,12 +18,14 @@ function App() {
 }
 
 // Authenticated App and Routes :
-function AuthApp() {
+function AuthApp({user}) { 
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/:listId" component={ListPage} />
-        <Route exact path="/" component={HomePage} />
+        <UserContext.Provider>
+          <Route path="/:listId" component={ListPage} />
+          <Route exact path="/" component={HomePage} />
+        </UserContext.Provider>
       </Switch>
     </BrowserRouter>
   );
