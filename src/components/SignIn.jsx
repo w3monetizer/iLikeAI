@@ -17,7 +17,7 @@ function SignIn() {
               my Code | AI Sharer
             </h1>
             <p className="leading-relaxed mb-8 ">
-              Code | AI is a social coding app that enables you to share scripts with friends in realtime.
+              my Code | AI is a social coding app that enables you to share scripts with friends in realtime.
             </p>
             <div className="flex justify-center">
               <button
