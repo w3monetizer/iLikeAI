@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import defaultImage from "../../static/default.svg";
+import defaultImage from "../../static/default.svg";
 import * as db from "../firestore";
 // import Empty from "./shared/Empty";
 // import Error from "./shared/Error";
