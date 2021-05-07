@@ -22,8 +22,10 @@ function CreateList({ user }) {
   }
 
   async function handleCreateList() {
+    setSubmitting(true);
     await db.createList(list, user);
     setList(DEFAULT_LIST);
+    setSubmitting(false);
   }
 
   return (
