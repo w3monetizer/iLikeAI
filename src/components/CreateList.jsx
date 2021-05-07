@@ -20,8 +20,9 @@ function CreateList({ user }) {
     }
   }
 
-  function handleCreateList() {
-    db.createList(list, user);
+  async function handleCreateList() {
+    await db.createList(list, user);
+    setList(DEFAULT_LIST);
   }
 
   return (
