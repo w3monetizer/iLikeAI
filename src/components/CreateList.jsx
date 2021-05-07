@@ -18,6 +18,10 @@ function CreateList({ user }) {
     }
   }
 
+  function handleCreateList() {
+    console.log(list);
+  }
+
   return (
     <div className="flex flex-col text-center w-full mb-12">
       <h1 className="text-2xl font-medium title-font mb-4 text-white tracking-widest">
@@ -50,7 +54,7 @@ function CreateList({ user }) {
           onChange={handleChange}
         />
         {/* display preview image */}
-        <button className="text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg">
+        <button onClick={handleCreateList} className="text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg">
           Create Repo
         </button>
         <p className="text-xs text-gray-600 mt-3">*Repo name required</p>
