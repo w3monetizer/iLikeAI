@@ -8,8 +8,10 @@ import JoinList from "../components/JoinList";
 import Error from "../components/shared/Error";
 import Loading from "../components/shared/Loading";
 import * as db from "../firestore";
+import { UserContext } from "..";
 
 function ListPage({ location }) {
+  const user = React.useContext(UserContext);
   const listId = location.pathname;
   const { data: list, error } = useSWR(listId, db.getList);
 
@@ -26,6 +28,7 @@ function ListPage({ location }) {
             </h1>
             <p className="mb-8 leading-relaxed">{list.description}</p>
             {/* Create new list item */}
+            <CreateItem />
             <p className="text-sm mt-2 text-gray-500 mb-8 w-full">
               New links appear below in realtime ✨
             </p>
