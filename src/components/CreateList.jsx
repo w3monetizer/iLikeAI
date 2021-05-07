@@ -54,6 +54,9 @@ function CreateList({ user }) {
           onChange={handleChange}
         />
         {/* display preview image */}
+        {list.image && (
+          <img className="mb4" src={ URL.createObjectURL(list.image) } />
+        )}
         <button onClick={handleCreateList} className="text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg">
           Create Repo
         </button>
