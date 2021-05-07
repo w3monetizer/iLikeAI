@@ -1,12 +1,14 @@
 import React from "react";
 import * as db from "../firestore";
 
-function CreateList({ user }) {
-  const [list, setList] = React.useState({
+const DEFAULT_LIST = {
     name: "",
     description: "",
     image: null
-  });
+  }
+
+function CreateList({ user }) {
+  const [list, setList] = React.useState(DEFAULT_LIST);
 
   function handleChange(event) {
     const { name, value, files } = event.target; // name = name | description | image
