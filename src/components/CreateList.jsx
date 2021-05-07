@@ -71,7 +71,7 @@ function CreateList({ user }) {
         />
         {/* display preview image */}
         {list.image && (
-          <img className="mb4" src={ URL.createObjectURL(list.image) } />
+          <img className="mb-4" src={ URL.createObjectURL(list.image) } />
         )}
         <button
           onClick={handleCreateList}
