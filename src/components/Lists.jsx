@@ -23,6 +23,9 @@ function UserLists() {
         <div className="container px-5 py-5 mx-auto">
           <div className="flex flex-wrap -m-4">
             {/* display lists that user is part of  */}
+            {lists.map(list => (
+              <ListItem key={list.id} list={list}/>
+            ))}
           </div>
         </div>
       </section>
