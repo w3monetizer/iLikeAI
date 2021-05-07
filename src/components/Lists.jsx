@@ -7,8 +7,13 @@ import * as db from "../firestore";
 // import Loading from "./shared/Loading";
 
 function UserLists() {
+  const [lists, setLists] = React.useState([]);
+
   React.useEffect(() => {
-    db.getUserLists('wNXI5KQOYPdhe89jJHbgny2k9mk2');
+    db.getUserLists('wNXI5KQOYPdhe89jJHbgny2k9mk2')
+      .then(lists => {
+        setLists(lists)
+      });
   }, []);
 
   return (
