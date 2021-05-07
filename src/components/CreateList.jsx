@@ -1,5 +1,5 @@
 import React from "react";
-// import * as db from "../firestore";
+import * as db from "../firestore";
 
 function CreateList({ user }) {
   const [list, setList] = React.useState({
