@@ -5,7 +5,7 @@ import * as db from "../firestore";
 // import Empty from "./shared/Empty";
 // import Error from "./shared/Error";
 // import Loading from "./shared/Loading";
-import useSWR from 'swr'; // stale (cache) while revalidate
+import useSWR from 'swr'; // stale (cache) while revalidate + loading & err handling
 
 function UserLists() {
   const [lists, setLists] = React.useState([]);
