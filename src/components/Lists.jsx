@@ -14,18 +14,10 @@ function UserLists({ user }) {
   if (!lists) return <Loading />
   if (lists.length === 0) return <Empty />
 
-  // const [lists, setLists] = React.useState([]);
-
-  // React.useEffect(() => {
-  //   db.getUserLists('wNXI5KQOYPdhe89jJHbgny2k9mk2')
-  //     .then(lists => {
-  //       setLists(lists)
-  //     });
-  // }, []);
-
   return (
     <>
       {/* display user list count */}
+      <UserListCount count={lists.length} />
       <section className="text-gray-500 bg-gray-900 body-font">
         <div className="container px-5 py-5 mx-auto">
           <div className="flex flex-wrap -m-4">
@@ -40,7 +32,7 @@ function UserLists({ user }) {
   );
 }
 
-function UserListCount() {
+function UserListCount({count}) {
   return (
     <div className="container px-5 py-5 mb-6 bg-gray-800 rounded mx-auto flex justify-center text-center">
       <div className="p-4 sm:w-1/4 w-1/2">
