@@ -19,7 +19,7 @@ function CreateList({ user }) {
   }
 
   function handleCreateList() {
-    console.log(list);
+    db.createList(list, user);
   }
 
   return (
