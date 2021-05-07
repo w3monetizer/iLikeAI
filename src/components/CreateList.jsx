@@ -26,6 +26,7 @@ function CreateList({ user }) {
     try {
       setSubmitting(true);
       await db.createList(list, user);
+      mutate(user.uid); // Refetch with mutate / swr lib
       setList(DEFAULT_LIST);
     } catch (error) {
       console.log(error);
