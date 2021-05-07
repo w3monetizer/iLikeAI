@@ -10,7 +10,7 @@ function CreateList({ user }) {
 
   function handleChange(event) {
     const { name, value, files } = event.target; // name = name | description | image
-    if (files.length > 0) {
+    if (files) {
       const image = files[0];
       setList(prevState => ({ ...prevState, image: image }))
     } else {
