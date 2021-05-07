@@ -8,6 +8,16 @@ function CreateList({ user }) {
     image: null
   });
 
+  function handleChange(event) {
+    const { name, value, files } = event.target; // name = name | description | image
+    if (files.length > 0) {
+      const image = files[0];
+      setList(prevState => ({ ...prevState, image: image }))
+    } else {
+      setList(prevState => ({ ...prevState, [name]: value }))
+    }
+  }
+
   return (
     <div className="flex flex-col text-center w-full mb-12">
       <h1 className="text-2xl font-medium title-font mb-4 text-white tracking-widest">
