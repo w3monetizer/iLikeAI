@@ -8,7 +8,7 @@ import * as db from "../firestore";
 
 function UserLists() {
   React.useEffect(() => {
-    db.getCollection('repos');
+    db.getCollection('lists');
   }, []);
 
   return (
