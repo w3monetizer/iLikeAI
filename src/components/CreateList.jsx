@@ -9,6 +9,7 @@ const DEFAULT_LIST = {
 
 function CreateList({ user }) {
   const [list, setList] = React.useState(DEFAULT_LIST);
+  const [submitting, setSubmitting] = React.useState(false);
 
   function handleChange(event) {
     const { name, value, files } = event.target; // name = name | description | image
