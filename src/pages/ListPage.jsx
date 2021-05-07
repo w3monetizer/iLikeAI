@@ -28,7 +28,7 @@ function ListPage({ location }) {
             </h1>
             <p className="mb-8 leading-relaxed">{list.description}</p>
             {/* Create new list item */}
-            <CreateItem />
+            <CreateItem user={user} listId={listId} />
             <p className="text-sm mt-2 text-gray-500 mb-8 w-full">
               New links appear below in realtime ✨
             </p>
@@ -57,6 +57,7 @@ function ListPage({ location }) {
         </div>
       </section>
       {/* display all items in list */}
+      <ItemList listId={listId} />
     </Layout>
   );
 }
