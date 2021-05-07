@@ -65,8 +65,11 @@ function CreateList({ user }) {
         {list.image && (
           <img className="mb4" src={ URL.createObjectURL(list.image) } />
         )}
-        <button onClick={handleCreateList} className="text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg">
-          Create Repo
+        <button
+          onClick={handleCreateList}
+          disabled={submitting}
+          className="text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg">
+          {submitting ? "Creating..." : "Create Repo"}
         </button>
         <p className="text-xs text-gray-600 mt-3">*Repo name required</p>
       </div>
