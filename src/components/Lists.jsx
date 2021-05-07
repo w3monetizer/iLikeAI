@@ -2,20 +2,26 @@ import React from "react";
 import { Link } from "react-router-dom";
 import defaultImage from "../../static/default.svg";
 import * as db from "../firestore";
-// import Empty from "./shared/Empty";
-// import Error from "./shared/Error";
-// import Loading from "./shared/Loading";
+import Empty from "./shared/Empty";
+import Error from "./shared/Error";
+import Loading from "./shared/Loading";
 import useSWR from 'swr'; // stale (cache) while revalidate + loading & err handling
 
-function UserLists() {
-  const [lists, setLists] = React.useState([]);
+function UserLists({ user }) {
+  const { data: lists, error } = useSWR(user.uid, db.getUserLists)
 
-  React.useEffect(() => {
-    db.getUserLists('wNXI5KQOYPdhe89jJHbgny2k9mk2')
-      .then(lists => {
-        setLists(lists)
-      });
-  }, []);
+  if (error) return <Error message={ error.message }/>
+  if (!lists) return <Loading />
+  if (lists.length === 0) return <Empty />
+
+  // const [lists, setLists] = React.useState([]);
+
+  // React.useEffect(() => {
+  //   db.getUserLists('wNXI5KQOYPdhe89jJHbgny2k9mk2')
+  //     .then(lists => {
+  //       setLists(lists)
+  //     });
+  // }, []);
 
   return (
     <>

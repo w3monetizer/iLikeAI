@@ -11,7 +11,7 @@ function HomePage() {
   return (
     <Layout>
       <CreateList user={ user }/>
-      <Lists />
+      <Lists user={ user }/>
     </Layout>
   );
 }
