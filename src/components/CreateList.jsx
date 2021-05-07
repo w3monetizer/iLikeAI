@@ -1,7 +1,13 @@
 import React from "react";
 // import * as db from "../firestore";
 
-function CreateList({user}) {
+function CreateList({ user }) {
+  const [list, setList] = React.useState({
+    name: "",
+    description: "",
+    image: null
+  });
+
   return (
     <div className="flex flex-col text-center w-full mb-12">
       <h1 className="text-2xl font-medium title-font mb-4 text-white tracking-widest">
@@ -16,6 +22,7 @@ function CreateList({user}) {
           placeholder="Add repo name"
           type="text"
           name="name"
+          onChange={handleChange}
           required
         />
         <textarea
@@ -23,12 +30,14 @@ function CreateList({user}) {
           placeholder="Add short description"
           type="text"
           name="description"
+          onChange={handleChange}
         />
         <input
           className="bg-gray-900 rounded border text-white border-gray-900 focus:outline-none focus:border-green-500 text-base px-4 py-2 mb-4"
           placeholder="Add repo name"
           type="file"
           name="image"
+          onChange={handleChange}
         />
         {/* display preview image */}
         <button className="text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg">
