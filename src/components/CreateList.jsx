@@ -39,6 +39,7 @@ function CreateList({ user }) {
           type="text"
           name="name"
           onChange={handleChange}
+          value={list.name}
           required
         />
         <textarea
@@ -47,6 +48,7 @@ function CreateList({ user }) {
           type="text"
           name="description"
           onChange={handleChange}
+          value={list.description}
         />
         <input
           className="bg-gray-900 rounded border text-white border-gray-900 focus:outline-none focus:border-green-500 text-base px-4 py-2 mb-4"
