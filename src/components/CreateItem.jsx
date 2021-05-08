@@ -2,7 +2,7 @@ import React from "react";
 import * as db from "../firestore";
 // import Error from "./shared/Error";
 
-function CreateItem() {
+function CreateItem({ user, listId }) {
   const [name, setName] = React.useState('')
   const [link, setLink] = React.useState('')
   const [submitting, setSubmitting] = React.useState('false')
@@ -11,7 +11,7 @@ function CreateItem() {
     event.preventDefault(); // To avoid reloading the page
     setSubmitting(true);
     const item = { name, link }
-
+    db.createListItem({ user, listId, item })
   }
 
   return (
