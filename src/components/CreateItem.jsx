@@ -5,6 +5,7 @@ import React from "react";
 function CreateItem() {
   const [name, setName] = React.useState('')
   const [link, setLink] = React.useState('')
+  const [submitting, setSubmitting] = React.useState('false')
 
   return (
     <>
