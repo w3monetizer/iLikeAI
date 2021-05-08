@@ -1,6 +1,6 @@
 import React from "react";
 import * as db from "../firestore";
-// import Error from "./shared/Error";
+import Error from "./shared/Error";  // To handle error from Firestore try/catch createListItem
 
 function CreateItem({ user, listId }) {
   const [name, setName] = React.useState('')
