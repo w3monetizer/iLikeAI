@@ -29,9 +29,10 @@ function CreateItem() {
         />
         <button
           type="submit"
+          disabled={submitting}
           className="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg"
         >
-          Create
+          {subbmitting ? "Creating..." : "Create"}
         </button>
       </form>
       {/* display error */}
