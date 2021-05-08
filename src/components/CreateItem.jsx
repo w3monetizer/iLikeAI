@@ -7,6 +7,13 @@ function CreateItem() {
   const [link, setLink] = React.useState('')
   const [submitting, setSubmitting] = React.useState('false')
 
+  function handleCreateItem(event) {
+    event.preventDefault(); // To avoid reloading the page
+    setSubmitting(true);
+    const item = { name, link }
+    
+  }
+
   return (
     <>
       <form onSubmit={handleCreateItem}
