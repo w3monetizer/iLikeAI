@@ -3,6 +3,9 @@ import React from "react";
 // import Error from "./shared/Error";
 
 function CreateItem() {
+  const [name, setName] = React.useState('')
+  const [link, setLink] = React.useState('')
+
   return (
     <>
       <form className="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:px-0">
@@ -10,6 +13,7 @@ function CreateItem() {
           className="flex-grow w-full bg-gray-800 rounded border border-gray-700 text-white focus:outline-none focus:border-green-500 text-base px-4 py-2 mr-4 mb-4 sm:mb-0"
           name="name"
           placeholder="Add item name"
+          onChange={event => setName(event.target.value)}
           type="text"
         />
         <input
