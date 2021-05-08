@@ -14,6 +14,7 @@ function CreateItem() {
           name="name"
           placeholder="Add item name"
           onChange={event => setName(event.target.value)}
+          value={name}
           type="text"
         />
         <input
@@ -22,6 +23,7 @@ function CreateItem() {
           placeholder="Add link"
           type="url"
           onChange={event => setLink(event.target.value)}
+          value={link}
           required
         />
         <button
