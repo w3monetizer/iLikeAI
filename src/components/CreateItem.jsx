@@ -1,5 +1,5 @@
 import React from "react";
-// import * as db from "../firestore";
+import * as db from "../firestore";
 // import Error from "./shared/Error";
 
 function CreateItem() {
@@ -11,7 +11,7 @@ function CreateItem() {
     event.preventDefault(); // To avoid reloading the page
     setSubmitting(true);
     const item = { name, link }
-    
+
   }
 
   return (
