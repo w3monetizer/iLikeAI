@@ -6,7 +6,7 @@ function CreateItem({ user, listId }) {
   const [name, setName] = React.useState('')
   const [link, setLink] = React.useState('')
   const [error, setError] = React.useState('')
-  const [submitting, setSubmitting] = React.useState('false')
+  const [submitting, setSubmitting] = React.useState(false)
 
   async function handleCreateItem(event) {
     try {
