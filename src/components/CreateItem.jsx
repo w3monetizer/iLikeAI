@@ -16,6 +16,8 @@ function CreateItem({ user, listId }) {
       db.createListItem({ user, listId, item })
     } catch (error) {
       setError(error.message)
+    } finally {
+      setSubmitting(false);
     }
   }
 
