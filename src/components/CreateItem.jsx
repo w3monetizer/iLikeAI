@@ -13,7 +13,9 @@ function CreateItem({ user, listId }) {
       event.preventDefault(); // To avoid reloading the page
       setSubmitting(true);
       const item = { name, link }
-      db.createListItem({ user, listId, item })
+      await db.createListItem({ user, listId, item })
+      setName('')
+      setLink('')
     } catch (error) {
       setError(error.message)
     } finally {
