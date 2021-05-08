@@ -5,13 +5,18 @@ import Error from "./shared/Error";  // To handle error from Firestore try/catch
 function CreateItem({ user, listId }) {
   const [name, setName] = React.useState('')
   const [link, setLink] = React.useState('')
+  const [error, setError] = React.useState('')
   const [submitting, setSubmitting] = React.useState('false')
 
-  function handleCreateItem(event) {
-    event.preventDefault(); // To avoid reloading the page
-    setSubmitting(true);
-    const item = { name, link }
-    db.createListItem({ user, listId, item })
+  async function handleCreateItem(event) {
+    try {
+      event.preventDefault(); // To avoid reloading the page
+      setSubmitting(true);
+      const item = { name, link }
+      db.createListItem({ user, listId, item })
+    } catch (error) {
+      setError(error.message)
+    }
   }
 
   return (
@@ -44,6 +49,7 @@ function CreateItem({ user, listId }) {
         </button>
       </form>
       {/* display error */}
+      <Error message={error} /> 
     </>
   );
 }
