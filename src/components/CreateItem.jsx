@@ -9,7 +9,8 @@ function CreateItem() {
 
   return (
     <>
-      <form className="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:px-0">
+      <form onSubmit={handleCreateItem}
+        className="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:px-0">
         <input
           className="flex-grow w-full bg-gray-800 rounded border border-gray-700 text-white focus:outline-none focus:border-green-500 text-base px-4 py-2 mr-4 mb-4 sm:mb-0"
           name="name"
