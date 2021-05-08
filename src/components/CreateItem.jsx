@@ -21,6 +21,7 @@ function CreateItem() {
           name="link"
           placeholder="Add link"
           type="url"
+          onChange={event => setLink(event.target.value)}
           required
         />
         <button
