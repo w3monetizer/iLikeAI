@@ -1,6 +1,6 @@
 {
-  "name": "myCodeAI",
-  "version": "0.0.0",
+  "name": "iLikeAI",
+  "version": "0.0.1",
   "scripts": {
     "dev": "vite",
     "build": "vite build"
