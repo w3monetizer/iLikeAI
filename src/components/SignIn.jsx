@@ -14,10 +14,10 @@ function SignIn() {
           />
           <div className="text-center lg:w-2/3 w-full">
             <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium italic text-white">
-              my Code | AI Sharer
+              iLike - AI Matcher
             </h1>
             <p className="leading-relaxed mb-8 ">
-              my Code | AI is a social coding app that enables you to share scripts with friends in realtime.
+              iLke AI is a social app that enables you to share interests with friends in realtime.
             </p>
             <div className="flex justify-center">
               <button
