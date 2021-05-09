@@ -25,7 +25,7 @@ function JoinList({ list, listId, user }) {
           </div>
           <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
             <h1 className="text-white text-3xl title-font font-large mb-2">
-              You are invited to join <strong>list</strong>
+              You are invited to join <strong>{list.name}</strong>
             </h1>
             <ul className="leading-relaxed text-base">
               <p>Current Users:</p>
