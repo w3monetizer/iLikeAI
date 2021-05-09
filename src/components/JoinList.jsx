@@ -30,7 +30,11 @@ function JoinList({ list, listId, user }) {
             <ul className="leading-relaxed text-base">
               <p>Current Users:</p>
               {/* display current users in list */}
-              
+              {list.users.map(user => (
+                <li key={user.id} className="font-bold" >
+                  {user.name}
+                </li>
+              ))}
             </ul>
           </div>
         </div>
