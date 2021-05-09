@@ -38,7 +38,9 @@ function JoinList({ list, listId, user }) {
             </ul>
           </div>
         </div>
-        <button className="flex mx-auto mt-20 text-white bg-orange-500 border-0 py-2 px-8 focus:outline-none hover:bg-orange-600 rounded text-lg">
+        <button
+          onClick={() => db.addUserToList(user, listId)}
+          className="flex mx-auto mt-20 text-white bg-orange-500 border-0 py-2 px-8 focus:outline-none hover:bg-orange-600 rounded text-lg">
           Join This List
         </button>
       </div>
