@@ -20,7 +20,7 @@ function ListPage({ location }) {
   // Check if user is not part of the users[] array => isNewUser
   const isNewUser = list.users.every(u => u.id !== user.uid)
   if (isNewUser) {  // Offer new user option to JoinList
-    return <JoinList />
+    return <JoinList list={list} listId={listId} user={user} />
   }
 
   return (
