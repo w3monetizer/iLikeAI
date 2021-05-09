@@ -2,8 +2,6 @@ import React from "react";
 import * as db from "../firestore";
 
 function JoinList({ list, listId, user }) {
-
-
   return (
     <section className="text-gray-500 bg-gray-900 body-font">
       <div className="container px-5 py-24 mx-auto">
