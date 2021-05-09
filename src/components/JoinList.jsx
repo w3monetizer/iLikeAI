@@ -1,7 +1,9 @@
 import React from "react";
-// import * as db from "../firestore";
+import * as db from "../firestore";
 
-function JoinList() {
+function JoinList({ list, listId, user }) {
+
+
   return (
     <section className="text-gray-500 bg-gray-900 body-font">
       <div className="container px-5 py-24 mx-auto">
@@ -28,6 +30,7 @@ function JoinList() {
             <ul className="leading-relaxed text-base">
               <p>Current Users:</p>
               {/* display current users in list */}
+              
             </ul>
           </div>
         </div>
