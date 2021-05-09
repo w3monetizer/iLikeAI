@@ -30,7 +30,7 @@ function Navbar() {
             <circle cx="9" cy="7" r="4"></circle>
             <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
           </svg>
-          <span className="ml-3 text-xl xl:block lg:hidden">my Code AI</span>
+          <span className="ml-3 text-xl xl:block lg:hidden">iLike AI</span>
         </a>
         <div className="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
           <button
