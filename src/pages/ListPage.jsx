@@ -14,7 +14,9 @@ import useCopyClipboard from "react-use-clipboard";
 function ListPage({ location }) {
   const user = React.useContext(UserContext);
 
-  const [isCopied, setCopied] = useCopyClipboard(window.location.href);
+  const [isCopied, setCopied] = useCopyClipboard(window.location.href, {
+    successDuration: 1000
+  });
 
   const listId = location.pathname;
   const { data: list, error } = useSWR(listId, db.getList);
