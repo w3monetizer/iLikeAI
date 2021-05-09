@@ -1,5 +1,6 @@
 node_modules
 firestore
 dist
+.firebase
 .firebaserc
 firebase.json
