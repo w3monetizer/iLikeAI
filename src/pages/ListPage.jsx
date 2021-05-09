@@ -17,7 +17,12 @@ function ListPage({ location }) {
 
   if (error) return <Error message={error.message} />;
   if (!list) return <Loading />;
-  
+  // Check if user is not part of the users[] array => isNewUser
+  const isNewUser = list.users.every(u => u.id !== user.uid)
+  if (isNewUser) {  // Offer new user option to JoinList
+    return <JoinList />
+  }
+
   return (
     <Layout>
       <section className="text-gray-500 bg-gray-900 body-font">
