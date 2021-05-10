@@ -17,7 +17,7 @@ function SignIn() {
               iLike - AI Growth Engine
             </h1>
             <p className="leading-relaxed mb-8 ">
-              iLke AI is a social app that enables you to share interests with friends in realtime.
+              iLke AI is a social app that enables you to share lists with friends in realtime.
             </p>
             <div className="flex justify-center">
               <button
