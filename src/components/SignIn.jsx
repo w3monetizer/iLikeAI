@@ -1,6 +1,6 @@
-import React from "react";
-import homeSvg from "../../static/home.svg";
-import * as db from "../firestore";
+import React from 'react';
+import homeSvg from '../../static/home.svg';
+import * as db from '../firestore';
 
 function SignIn() {
   return (
@@ -14,10 +14,11 @@ function SignIn() {
           />
           <div className="text-center lg:w-2/3 w-full">
             <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium italic text-white">
-              iLike AI - Social Growth Engine
+              I Like AI - Universal Growth Engine
             </h1>
             <p className="leading-relaxed mb-8 ">
-              iLke AI is a social app that enables you to share lists with friends in realtime.
+              I Like AI is a social app that enables you to share lists with
+              friends in realtime.
             </p>
             <div className="flex justify-center">
               <button
