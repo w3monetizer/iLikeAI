@@ -1,21 +1,21 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Layout from "../components/shared/Layout";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Layout from '../components/shared/Layout';
 import useSWR from 'swr';
-import CreateItem from "../components/CreateItem";
-import ItemList from "../components/ItemList";
-import JoinList from "../components/JoinList";
-import Error from "../components/shared/Error";
-import Loading from "../components/shared/Loading";
-import * as db from "../firestore";
-import { UserContext } from "..";
-import useCopyClipboard from "react-use-clipboard";
+import CreateItem from '../components/CreateItem';
+import ItemList from '../components/ItemList';
+import JoinList from '../components/JoinList';
+import Error from '../components/shared/Error';
+import Loading from '../components/shared/Loading';
+import * as db from '../firestore';
+import { UserContext } from '..';
+import useCopyClipboard from 'react-use-clipboard';
 
 function ListPage({ location }) {
   const user = React.useContext(UserContext);
 
   const [isCopied, setCopied] = useCopyClipboard(window.location.href, {
-    successDuration: 1000
+    successDuration: 1000,
   });
 
   const listId = location.pathname;
@@ -24,9 +24,10 @@ function ListPage({ location }) {
   if (error) return <Error message={error.message} />;
   if (!list) return <Loading />;
   // Check if user is not part of the users[] array => isNewUser
-  const isNewUser = list.users.every(u => u.id !== user.uid)
-  if (isNewUser) {  // Offer new user option to JoinList
-    return <JoinList list={list} listId={listId} user={user} />
+  const isNewUser = list.users.every((u) => u.id !== user.uid);
+  if (isNewUser) {
+    // Offer new user option to JoinList
+    return <JoinList list={list} listId={listId} user={user} />;
   }
 
   return (
@@ -38,6 +39,9 @@ function ListPage({ location }) {
               {list.name}
             </h1>
             <p className="mb-8 leading-relaxed">{list.description}</p>
+            <p className="mb-8 leading-relaxed">
+              {list.repo ?? 'Add list repo'}
+            </p>
             {/* Create new list item */}
             <CreateItem user={user} listId={listId} />
             <p className="text-sm mt-2 text-gray-500 mb-8 w-full">
@@ -46,12 +50,15 @@ function ListPage({ location }) {
             <div className="flex text-gray-300">
               <button
                 onClick={setCopied}
-                className="bg-orange-500 inline-flex py-3 px-5 rounded-lg items-center hover:bg-orange-600 hover:text-white focus:outline-none">
+                className="bg-orange-500 inline-flex py-3 px-5 rounded-lg items-center hover:bg-orange-600 hover:text-white focus:outline-none"
+              >
                 <span className="flex items-start flex-col leading-none">
                   <span className="text-xs text-gray-200 mb-1">
                     Share With Friends
                   </span>
-                  <span className="title-font font-medium">{ isCopied ? "Copied" : "Copy Link"}</span>
+                  <span className="title-font font-medium">
+                    {isCopied ? 'Copied' : 'Copy Link'}
+                  </span>
                 </span>
               </button>
               <Link
