@@ -1,10 +1,10 @@
-import React from "react";
-import { Link, useLocation } from "react-router-dom";
-import * as db from "../../firestore";
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import * as db from '../../firestore';
 
 function Navbar() {
   const { pathname } = useLocation();
-  const isHomeRoute = pathname === "/";
+  const isHomeRoute = pathname === '/';
 
   return (
     <header className="text-gray-500 bg-gray-900 body-font">
@@ -30,12 +30,13 @@ function Navbar() {
             <circle cx="9" cy="7" r="4"></circle>
             <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
           </svg>
-          <span className="ml-3 text-xl xl:block lg:hidden">iLike AI</span>
+          <span className="ml-3 text-xl xl:block lg:hidden">i Like AI</span>
         </a>
         <div className="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
           <button
             onClick={db.logOut}
-            className="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">
+            className="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0"
+          >
             Logout
             <svg
               fill="none"
