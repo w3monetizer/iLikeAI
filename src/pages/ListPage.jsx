@@ -42,6 +42,9 @@ function ListPage({ location }) {
             <p className="mb-8 leading-relaxed">
               {list.repo ?? 'Add list repo'}
             </p>
+            <p className="mb-8 leading-relaxed">
+              {list.tags ?? 'Add list tags'}
+            </p>
             <img
               className="h-40 rounded object-cover object-center mb-6"
               src={list.image}
