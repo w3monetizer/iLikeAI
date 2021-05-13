@@ -5,6 +5,7 @@ import { mutate } from 'swr';
 const DEFAULT_LIST = {
   name: '',
   description: '',
+  tags: '',
   repo: '',
   image: null,
 };
@@ -64,7 +65,15 @@ function CreateList({ user }) {
         />
         <input
           className="bg-gray-900 rounded border text-white border-gray-900 focus:outline-none focus:border-green-500 text-base px-4 py-2 mb-4"
-          placeholder="Add repo name"
+          placeholder="Add tags"
+          type="text"
+          name="tags"
+          onChange={handleChange}
+          value={list.tags}
+        />
+        <input
+          className="bg-gray-900 rounded border text-white border-gray-900 focus:outline-none focus:border-green-500 text-base px-4 py-2 mb-4"
+          placeholder="Add repo link"
           type="text"
           name="repo"
           onChange={handleChange}
