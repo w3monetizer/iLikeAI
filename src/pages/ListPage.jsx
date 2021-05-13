@@ -42,6 +42,11 @@ function ListPage({ location }) {
             <p className="mb-8 leading-relaxed">
               {list.repo ?? 'Add list repo'}
             </p>
+            <img
+              className="h-40 rounded object-cover object-center mb-6"
+              src={list.image}
+              alt={list.name}
+            />
             {/* Create new list item */}
             <CreateItem user={user} listId={listId} />
             <p className="text-sm mt-2 text-gray-500 mb-8 w-full">
